@@ -1,0 +1,252 @@
+body{
+    background-color: black;
+}
+h1{
+    color: chartreuse;
+}
+.robot{
+    height:500px;
+    border:2px solid red;
+}
+.head{
+    height:150px;
+    width:150px;
+    background-color: chartreuse;
+    /* position:relative; */
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin:auto;
+    /* margin-bottom: 10px; */
+    margin-top:5px;
+    transition:width 1s ease;
+}
+.robot:hover .head{
+    width:230px;
+    animation:movehead 1s infinite;
+}
+@keyframes movehead{
+    0%{
+        width:150px;
+    }
+    25%{
+        width:200px;
+    }
+    50%{
+        width:150px;
+    }
+    75%{
+        width:200px;
+    }
+    100%{
+        width:150;
+    }
+}
+
+.eyes{
+    display:flex;
+    width: 150px;
+    position: absolute;
+    margin-top: 4%;
+    justify-content: space-around;
+}
+.leye{
+    
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius:50%;
+    /* margin-left:5%; */
+}
+.reye{
+
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius:50%;
+    /* margin-right:5%; */
+}
+.body{
+    display: flex;
+    justify-content: space-evenly;
+    width:200px;
+    margin: auto;
+    margin-top: 0.5%;
+}
+.lhand{
+    height:100px;
+    width:20px;
+    background-color: chartreuse;
+    border-radius: 50px; 
+    margin-right:10px;   
+    margin-top:20px;
+    transition: transform 1s ease;
+}
+.robot:hover .lhand{
+    transform:rotate(90deg);
+    transform-origin:top center;
+    animation: movelhand 2s infinite;
+}
+@keyframes movelhand{
+    0%{
+        transform:rotate(0deg);
+    transform-origin:top center;
+    }
+    /* 25%{
+        transform:rotate(90deg);
+        transform-origin:top center;
+    } */
+    50%{
+        transform:rotate(90deg);
+        transform-origin:top center;
+    }
+    /* 75%{
+        transform:rotate(90deg);
+        transform-origin:top center;
+    } */
+    100%{
+        transform:rotate(0deg);
+    transform-origin:top center;
+    }
+}
+.center{
+    height:150px;
+    width:150px;
+    background-color: chartreuse;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: transform 1s ease;
+}
+.robot:hover .center{
+    transform: rotate(360deg);
+    transform-origin: top center;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    animation: movecenter 1s infinite;
+}
+@keyframes movecenter{
+    0%{
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    25%{
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+    50%{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+    75%{
+        transform: rotate(270deg);
+        transform-origin: center;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+.rhand{
+    height:100px;
+    width:20px;
+    background-color:chartreuse; 
+    border-radius: 50px;
+    margin-top:20px;
+    margin-left:10px;
+    transition: transform 1s ease;
+}
+.robot:hover .rhand{
+    transform:rotate(90deg);
+    transform-origin:top center;
+    animation: moverhand 2s infinite;
+}
+@keyframes moverhand{
+    0%{
+        transform:rotate(0deg);
+    transform-origin:top center;
+    }
+    /* 25%{
+        transform:rotate(90deg);
+        transform-origin:top center;
+    } */
+    50%{
+        transform:rotate(-90deg);
+        transform-origin:top center;
+    }
+    /* 75%{
+        transform:rotate(90deg);
+        transform-origin:top center;
+    } */
+    100%{
+        transform:rotate(0deg);
+    transform-origin:top center;
+    }
+}
+.legs{
+    display:flex;
+    width:100px;
+    margin:auto;
+    justify-content: space-evenly;
+    margin-top:-2%;
+}
+.lleg{
+    height:60px;
+    width:20px;
+    background-color: chartreuse;
+    border-radius: 50px;
+    /* border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
+    margin-left:270px ;*/
+        transition: transform 1s ease;
+     }
+    .robot:hover .lleg{
+        transform:rotate(90deg);
+        transform-origin:top center;
+        animation: movelleg 2s infinite;
+    }
+    @keyframes movelleg{
+        0%{
+            transform:rotate(0deg);
+        transform-origin:top center;
+        }
+        50%{
+            transform:rotate(90deg);
+            transform-origin:top center;
+        }
+        100%{
+            transform:rotate(0deg);
+        transform-origin:top center;
+        }
+    }
+.rleg{
+    height:60px;
+    width:20px;
+    background-color: chartreuse;
+    border-radius: 50px;
+    /* border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-left:190px; */
+    transition: transform 1s ease;
+    }
+    .robot:hover .rleg{
+        transform:rotate(90deg);
+        transform-origin:top center;
+        animation: moverleg 2s infinite;
+    }
+    @keyframes moverleg{
+        0%{
+            transform:rotate(0deg);
+        transform-origin:top center;
+        }
+        50%{
+            transform:rotate(-90deg);
+            transform-origin:top center;
+        }
+        100%{
+            transform:rotate(0deg);
+        transform-origin:top center;
+        }
+    }
